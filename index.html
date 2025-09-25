@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 🔹 Header & Navbar -->
+  <header>
+    <div class="logo">LazaShop</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Produk</a></li>
+        <li><a href="#">Promo</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">&#9776;</div>
+  </header>
+
+  <!-- 🔹 Slideshow -->
+  <section class="slideshow">
+    <div class="slides fade">
+      <img src="lazada.jpeg" alt="Slide 1">
+    </div>
+    <div class="slides fade">
+      <img src="lazada1.jpeg" alt="Slide 2">
+    </div>
+    <div class="slides fade">
+      <img src="lasada2.jpeg" alt="Slide 3">
+    </div>
+    <div class="slides fade">
+      <img src="lasada99.jpeg" alt="Slide 3">
+    </div>
+  </section>
+
+  <!-- 🔹 Produk -->
+  <section class="products">
+    <h2>Produk Unggulan</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="kaus kaki.jpeg" alt="Produk 1">
+        <h3>KAUS KAKI</h3>
+        <p>Rp 900.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+      <div class="product-card">
+        <img src="minuman kopi.jpeg" alt="Produk 2">
+        <h3>MINUMAN KOPI</h3>
+        <p>Rp 500.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+      <div class="product-card">
+        <img src="sandal.jpeg" alt="Produk 3">
+        <h3>SANDAL JEPIT </h3>
+        <p>Rp 1.000.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="sepatu.jpeg" alt="Produk 1">
+        <h3>SEPATU</h3>
+        <p>Rp 1.500.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+      <div class="product-card">
+        <img src="tas.jpeg" alt="Produk 2">
+        <h3>TAS</h3>
+        <p>Rp 2.000.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+      <div class="product-card">
+        <img src="topi.jpeg" alt="Produk 3">
+        <h3>TOPI</h3>
+        <p>Rp 800.000</p>
+        <button>Beli Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <p>© 2025 LazaShop. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <!-- 🔹 Script untuk slideshow & hamburger -->
+  <script>
+    // Slideshow
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let slides = document.querySelectorAll(".slides");
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000); // Ganti gambar setiap 3 detik
+    }
+
+    // Hamburger Menu
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar ul");
+    hamburger.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
